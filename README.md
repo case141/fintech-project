@@ -7,8 +7,8 @@ scripts folder contains js scripts for interacting with respective htmls
 textfiles folder contains the text files we created at the start of the module
 
 Run following commands for first time project setup:
-npm init
-npm install 
+npm init<br />
+npm install <br />
 npm install boostrap@5.2.3
 
 Commands to start backend server:
