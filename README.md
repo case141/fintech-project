@@ -15,9 +15,9 @@ Commands to start backend server:<br />
 cd backend<br />
 node main.js
 
-2 basic templates have been used (for now)
-stylish-portfolio: https://startbootstrap.com/theme/stylish-portfolio
+2 basic templates have been used (for now)<br />
+stylish-portfolio: https://startbootstrap.com/theme/stylish-portfolio<br />
 ![image](https://github.com/case141/fintech-project/assets/7495242/cddca837-3f7b-4383-bacb-88fc274f1cfc)
 
-default boostrap: https://getbootstrap.com/docs/5.2/getting-started/download/
+default boostrap: https://getbootstrap.com/docs/5.2/getting-started/download/<br />
 ![image](https://github.com/case141/fintech-project/assets/7495242/beea48c0-8ff7-45c9-b55c-befeece1b272)
