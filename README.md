@@ -1,10 +1,10 @@
 # fintech-project
 Hi there! Welcome to our NUS Money Project!
 
-Please note the following:<br />
-frontend folder contains bootstrap related css and js template files, scripts for frontend pages, html files, assets and images<br />
-backend folder contains apis for various features like getting user data and transaction data<br />
-textfiles folder contains the text files we created at the start of the module
+Please note what the respective folders contain:<br />
+frontend folder - bootstrap-related css and js template files, scripts for frontend pages, html files, assets and images<br />
+backend folder - apis for various features like getting user data and transaction data<br />
+textfiles folder - the text files we created at the start of the module
 
 Run following commands for first time project setup:<br />
 npm init<br />
