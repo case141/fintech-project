@@ -24,3 +24,6 @@ stylish-portfolio: https://startbootstrap.com/theme/stylish-portfolio<br />
 
 default boostrap: https://getbootstrap.com/docs/5.2/getting-started/download/<br />
 ![image](https://github.com/case141/fintech-project/assets/7495242/beea48c0-8ff7-45c9-b55c-befeece1b272)
+
+Get All Accounts
+![image](https://github.com/case141/fintech-project/assets/7495242/54493ecf-240b-4bcd-ab4a-96e99ae264b5)
