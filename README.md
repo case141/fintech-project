@@ -6,7 +6,7 @@ frontend folder - bootstrap-related css and js template files, scripts for styli
 backend folder - apis for various features like getting user data and transaction data<br />
 textfiles folder - the text files we created at the start of the module
 
-#First time setup
+# First time setup
 Add a .env file in backend folder
 
 Run following commands for first time project setup:<br />
