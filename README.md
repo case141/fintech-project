@@ -6,14 +6,17 @@ frontend folder - bootstrap-related css and js template files, scripts for styli
 backend folder - apis for various features like getting user data and transaction data<br />
 textfiles folder - the text files we created at the start of the module
 
+#First time setup
+Add a .env file in backend folder
+
 Run following commands for first time project setup:<br />
 npm init<br />
 npm install <br />
 npm install boostrap@5.2.3
 
-Commands to start backend server:<br />
+Commands to start backend and database server:<br />
 cd backend<br />
-node main.js
+node main
 
 2 basic templates have been used (for now)<br />
 stylish-portfolio: https://startbootstrap.com/theme/stylish-portfolio<br />
