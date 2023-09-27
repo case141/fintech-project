@@ -17,6 +17,8 @@ npm install boostrap@5.2.3
 Commands to start backend and database server:<br />
 cd backend<br />
 node main
+![image](https://github.com/case141/fintech-project/assets/7495242/511bbf3e-5c20-4102-9aca-0b8094492a64)
+
 
 2 basic templates have been used (for now)<br />
 stylish-portfolio: https://startbootstrap.com/theme/stylish-portfolio<br />
