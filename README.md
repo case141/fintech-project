@@ -2,7 +2,7 @@
 Hi there! Welcome to our NUS Money Project!<br />
 This project uses Bootstrap templates in the frontend and node.js/MySQL database as the backend.
 
-#### Please note what the respective folders contain:<br />
+#### Please note what the respective folders contain: 
 frontend folder - bootstrap-related css and js template files, scripts for styling frontend pages, html files, assets and images<br />
 backend folder - apis for various features like getting user data and transaction data<br />
 textfiles folder - the text files we created at the start of the module
@@ -10,17 +10,17 @@ textfiles folder - the text files we created at the start of the module
 # First time setup
 Add a .env file in backend folder
 
-#### Run following commands for first time project setup:<br />
+#### Run following commands for first time project setup: 
 npm init<br />
 npm install <br />
 npm install boostrap@5.2.3
 
-#### Commands to start backend and database server:<br />
+#### Commands to start backend and database server: 
 cd backend<br />
 node main<br />
 
 
-2 basic templates have been used (for now)<br />
+#### 2 basic templates have been used (for now) 
 stylish-portfolio: https://startbootstrap.com/theme/stylish-portfolio<br />
 ![image](https://github.com/case141/fintech-project/assets/7495242/cddca837-3f7b-4383-bacb-88fc274f1cfc)
 
