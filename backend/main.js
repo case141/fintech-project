@@ -8,11 +8,13 @@ const service = express();
 service.engine('html', es6Renderer);
 service.set('views', '../frontend');
 service.set('view engine', 'html');
- 
+
 service.get('/', function(req, res) {
   res.render('index', {locals: {title: 'Welcome!'}});
 });
 
+service.use(express.static('../frontend'))
+ 
 service.use(express.json());
 
 //service.use("/user", user.router);
