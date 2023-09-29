@@ -111,6 +111,7 @@ router.post("/register", (request, response) => {
                 } else {
                     // Send a 201 (Created) response upon successful registration
                     response.status(201).send("User registered successfully!");
+                    console.log("User created");
                 }
             }
         );
