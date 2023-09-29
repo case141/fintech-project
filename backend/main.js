@@ -1,10 +1,13 @@
 const express = require("express");
+const cors = require("cors");
 const es6Renderer = require('express-es6-template-engine');
 const user = require("./apis/user");
 const accounts = require("./apis/accounts");
 const transactions = require("./apis/transactions");
 
 const service = express();
+// Enable CORS for all routes
+service.use(cors());
 
 service.engine('html', es6Renderer);
 service.set('views', '../frontend');
