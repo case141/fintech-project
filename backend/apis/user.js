@@ -93,34 +93,45 @@ router.get("/get-user-by-id", (request, response) => {
 // Register a new user with username, email, and password
 router.post("/register", (request, response) => {
     try {
-        const { username, email, password } = request.body;
+        const { username, email, password, city } = request.body;
 
         if (!username || !email || !password) {
-            response.status(400).send("All fields are required");
+            response.status(400).send("Username, email, and password are required fields.");
             return;
         }
 
-        // Execute the SQL query to insert a new user
-        database.mysqlConnection.query(
-            "INSERT INTO passwords (username, email, password) VALUES (?, ?, ?)",
-            [username, email, password],
-            (error, results) => {
-                if (error) {
-                    // Handle any database query errors
-                    internalError(response, error);
-                } else {
-                    // Send a 201 (Created) response upon successful registration
-                    response.status(201).send("User registered successfully!");
-                    console.log("User created");
-                }
+        // Step 1: Fetch the last ID from the database
+        database.mysqlConnection.query("SELECT MAX(id) as lastId FROM passwords", (error, results) => {
+            if (error) {
+                // Handle any database query errors
+                internalError(response, error);
+            } else {
+                // Calculate the new unique ID
+                const lastId = results[0].lastId || 0; // Use 0 if there are no existing records
+                const newId = lastId + 1;
+
+                // Step 2: Define the SQL query and parameters
+                const query = "INSERT INTO passwords (id, username, email, password, city) VALUES (?, ?, ?, ?, ?)";
+                const queryParams = [newId, username, email, password, city];
+
+                // Execute the SQL query to insert a new user
+                database.mysqlConnection.query(query, queryParams, (error, results) => {
+                    if (error) {
+                        // Handle any database query errors
+                        internalError(response, error);
+                    } else {
+                        // Send a 201 (Created) response upon successful registration
+                        response.status(201).send("User registered successfully!");
+                        console.log("User created with ID:", newId);
+                    }
+                });
             }
-        );
+        });
     } catch (error) {
         internalError(response, error);
     }
 });
 
-// Forgot password route
 // Forgot password route
 router.post("/forgot-password", async (request, response) => {
     try {
