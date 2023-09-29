@@ -81,20 +81,40 @@
     <h1 class="h3 mb-3 fw-normal">Create a User Account</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="email" class="form-control" id="username" placeholder="username">
       <label for="floatingInput">Username</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="email" class="form-control" id="email" placeholder="email">
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" class="form-control" id="password" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
 
     <a class="w-100 btn btn-lg btn-primary" type="submit" href="dashboard.html">Sign Up</a>
     <p class="mt-5 mb-3 text-muted">&copy; 2017–2022</p>
+    <p id="demo">
+
+    </p>
   </form>
 </main>
 
-
+<script>
+  function MyFunction(e) {
+      e.preventDefault();
+      var username = document.getElementById("username").value
+      var email = document.getElementById("email").value
+      var password = document.getElementById("password").value
+      var city = document.getElementById("city").value
+      document.getElementById("demo").innerHTML = name + " " + password + " " + city;
+      fetch('http://localhost:5100', {
+        method: 'POST',
+        body: JSON.stringify({ name, age, city })
+      }).then(res => res.json())
+    }
+</script>
     
   </body>
 </html>
