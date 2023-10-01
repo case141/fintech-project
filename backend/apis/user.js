@@ -13,7 +13,7 @@ function internalError(response, error) {
 function checkUsernameExists(username) {
     return new Promise((resolve, reject) => {
         // Execute the SQL query to check if the username exists
-        database.mysqlConnection.query("SELECT COUNT(*) as count FROM passwords WHERE username = ?", [username], (error, results) => {
+        database.mysqlConnection.query("SELECT COUNT(*) as count FROM users WHERE username = ?", [username], (error, results) => {
             if (error) {
                 reject(error);
             } else {
@@ -27,7 +27,7 @@ function checkUsernameExists(username) {
 
 function getEmailForUsername(username) {
     return new Promise((resolve, reject) => {
-        const query = "SELECT email FROM passwords WHERE username = ?";
+        const query = "SELECT email FROM users WHERE username = ?";
 
         database.mysqlConnection.query(query, [username], (error, results) => {
             if (error) {
@@ -55,7 +55,7 @@ function maskEmail(email) {
 // Get the data of all users
 router.get("/get-all", (request, response) => {
     // Execute the SQL query to fetch all user data
-    database.mysqlConnection.query("SELECT * FROM passwords", (error, results) => {
+    database.mysqlConnection.query("SELECT * FROM users", (error, results) => {
         if (error) {
             // Handle any database query errors
             internalError(response, error);
@@ -102,7 +102,7 @@ router.post("/register", (request, response) => {
 
         // Execute the SQL query to insert a new user
         database.mysqlConnection.query(
-            "INSERT INTO passwords (username, email, password) VALUES (?, ?, ?)",
+            "INSERT INTO users (username, email, password) VALUES (?, ?, ?)",
             [username, email, password],
             (error, results) => {
                 if (error) {
