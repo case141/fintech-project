@@ -1,4 +1,4 @@
-# fintech-project
+# Better Money
 Hi there! Welcome to our NUS Money Project!<br />
 This project uses Bootstrap templates in the frontend and node.js/MySQL database as the backend.
 
